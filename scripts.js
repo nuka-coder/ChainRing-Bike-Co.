@@ -17,7 +17,6 @@ var popoutBtns = $('.pop-btns');
       slideModal3();
     }
  });
-
  popoutBtns.hover(function(event) {
    $(event.target).addClass("popHover");
  },
@@ -25,10 +24,93 @@ var popoutBtns = $('.pop-btns');
      $(event.target).removeClass("popHover");
    });
 
-
-
-
-
+// Sliding Modal Animations
+   var modal1 = $("#Product-Modal1");
+   var modal2 = $("#Product-Modal2");
+   var modal3 = $("#Product-Modal3");
+// Modal 1
+   function slideModal1() {
+     isModal1Hidden();
+     // display none for other modals
+     modal2.fadeOut();
+     modal3.fadeOut();
+     addColor1();
+     };
+   // check if modal is hidden to display or hide landing text
+   function isModal1Hidden() {
+     if (modal1.is(":hidden")) {
+       $(".heading-div, .subheading-div").delay(200).fadeOut();
+       $(".red-stripe").slideUp(500, "linear");
+       modal1.slideDown();
+       return;
+      }
+     else {
+       $(".heading-div, .subheading-div").delay(500).fadeIn();
+       $(".red-stripe").delay(1000).slideDown(500, "linear");
+       modal1.delay(500).slideUp();
+       return;
+     }
+   }
+   // modal 1 color correct, apply new color to all popout btns
+   function addColor1() {
+     popoutBtns.css("background-color", "rgba(167, 0, 0, .7)");
+   }
+// Modal 2
+   function slideModal2() {
+     isModal2Hidden();
+     // display none for other modals
+     modal1.fadeOut();
+     modal3.fadeOut();
+     };
+   // check if modal is hidden to display or hide landing text
+   function isModal2Hidden() {
+     if (modal2.is(":hidden")) {
+       $(".heading-div, .subheading-div").delay(200).fadeOut();
+       $(".red-stripe").slideUp(500, "linear");
+       modal2.slideDown();
+       addColor2();
+       return;
+      }
+     else {
+       $(".heading-div, .subheading-div").delay(500).fadeIn();
+       $(".red-stripe").delay(1000).slideDown(500, "linear");
+       modal2.delay(500).slideUp();
+       addColor1();
+       return;
+     }
+   }
+   // modal 2 color correct
+   function addColor2() {
+     popoutBtns.css("background-color", "rgba(47, 79, 79)");
+   }
+//Modal 3
+   function slideModal3() {
+     isModal3Hidden();
+     // display none for other modals
+     modal1.fadeOut();
+     modal2.fadeOut();
+     };
+   // check if modal is hidden to display or hide landing text
+   function isModal3Hidden() {
+     if (modal3.is(":hidden")) {
+       $(".heading-div, .subheading-div").delay(200).fadeOut();
+       $(".red-stripe").slideUp(500, "linear");
+       modal3.slideDown();
+       addColor3();
+       return;
+      }
+     else {
+       $(".heading-div, .subheading-div").delay(500).fadeIn();
+       $(".red-stripe").delay(1000).slideDown(500, "linear");
+       modal3.delay(500).slideUp();
+       addColor1();
+       return;
+     }
+   }
+   // modal 3 color correct function
+   function addColor3() {
+     popoutBtns.css("background-color", "rgb(128, 165, 32)");
+   }
 
 // Animation for h1
 $("h1").hover(function(event) {
@@ -53,65 +135,3 @@ $("button").hover(function(event) {
   function(event) {
     $(this).removeClass("btn-hover");
   });
-
-// Sliding Modal Animations
-var modal1 = $("#Product-Modal1");
-var modal2 = $("#Product-Modal2");
-var modal3 = $("#Product-Modal3");
-
-function slideModal1() {
-  // check if modal is hidden to display or hide landing text
-  isModalHidden();
-  // display none for other modals
-  modal2.fadeOut();
-  modal3.fadeOut();
-  // apply new color to all popout btns
-  addColor1();
-  };
-// Is Modal1 hidden? If statment,
-function isModalHidden() {
-  if (modal1.is(":hidden")) {
-    $(".heading-div, .subheading-div").delay(200).fadeOut();
-    $(".red-stripe").slideUp(500, "linear");
-    modal1.slideDown();
-    return;
-   }
-  else {
-    $(".heading-div, .subheading-div").delay(500).fadeIn();
-    $(".red-stripe").delay(1000).slideDown(500, "linear");
-    modal1.delay(500).slideUp();
-    return;
-  }
-}
-// modal 1 color correct, apply new color to all popout btns
-function addColor1() {
-  popoutBtns.css("background-color", "rgba(167, 0, 0, .7)");
-}
-
-// modal 2 color correct
-function addColor2() {
-  popoutBtns.css("background-color", "rgba(47, 79, 79)");
-}
-function slideModal2() {
-  $(".heading-div, .subheading-div").addClass("display-none");
-  $(".red-stripe").slideUp(500, "linear");
-  modal1.fadeOut();
-  modal3.fadeOut();
-  modal2.delay(500).slideToggle();
-  addColor2();
-}
-
-// modal 3 color correct function
-function addColor3() {
-  popoutBtns.css("background-color", "rgba(47, 79, 79)");
-}
-function slideModal3() {
-  // modal3 slides into viewport
-  modal3.toggleClass("sliding-modal");
-  // landing page background text content displays as none
-  $(".heading-div, .subheading-div").toggleClass("display-none");
-  // red stripe design slides out of viewport
-  $(".red-stripe").slideToggle();
-  //change color on all popout buttons
-  addColor3();
-}
