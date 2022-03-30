@@ -1,0 +1,401 @@
+:root {
+  --primary1: #A70000;
+  --base1: #FFFFFF;
+  --base2: #000;
+  --secondary1: #C2C2C2;
+  --secondary2: #707070;
+}
+@import url(https://allfont.net/allfont.css?fonts=agency-fb);
+
+body {
+  background-color: var(--base2);
+  margin: 0;
+  overflow: hidden;
+  cursor: crosshair;
+  position: relative;
+}
+a {
+  cursor: pointer;
+  font-family: Montserrat, monospace;
+  font-weight: 300;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  font-family: "Agency FB", sans-serif;
+  font-size: 1em;
+}
+h1 {
+  color: var(--base1);
+  display: inline-block;
+  font-family: "Agency FB", arial;
+  font-size: 10em;
+  font-weight: bolder;
+  line-height: 150px;
+  margin: 0;
+  text-transform: uppercase;
+  transition: text-shadow 410ms ease-in 0s;
+  transition: font-size 350ms ease-in 0s;
+  transition: transform 310ms ease-in 0s;
+}
+h2, h3, h4, h5, h6 {
+  color: var(--base1);
+  font-family: "Agency FB", arial;
+  text-transform: uppercase;
+}
+p {
+  color: var(--secondary1);
+  font-family: Montserrat, monospace;
+  font-weight: 300;
+}
+
+/* Icons */
+.icons {
+  color: var(--secondary1);
+  cursor: pointer;
+  font-size: 1.5em;
+  opacity: .5;
+}
+.cart-icon {
+  color: var(--base1);
+  font-size: 2em;
+  font-weight: lighter;
+  padding-left: 2em;
+  transform: rotatey(180deg);
+}
+.png-icons {
+  background-color: var(--secondary1);
+  border-radius: 2.5px;
+  height: 1.2rem;
+  opacity: .5;
+  margin: .7em 0 0;
+  padding: 1.25px;
+  width: 1.2rem;
+}
+.star-icon {
+  color: var(--base1);
+  font-size: .7em;
+  padding: 3px .25em;
+}
+
+/*  Javascript Toggled Classes */
+/* .display-none {
+  animation-name: fade-out;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+@keyframes fade-out {
+  from {opacity: inherit;}
+  to {opacity: 0;}
+} */
+
+/* Landing Section */
+.landing-section {
+  background-image: url(images/bike-bg-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  position: relative;
+  animation-name: fade-in;
+  animation-duration: 2.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.red-stripe {
+  background-color: var(--primary1);
+  height: 100vh;
+  width: 10em;
+  opacity: .5;
+  position: absolute;
+  left: 30vw;
+  top: 0;
+  transition: opacity 300ms ease 0;
+}
+
+/* Header Section */
+
+            /* header */
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5em 1em;
+  position: relative;
+  z-index: 100;
+}
+
+.logo-text1 {
+  color: var(--base1);
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0 1em 0 0;
+}
+
+          /* nav */
+.nav-links {
+  color: var(--base1);
+  padding: 0 3em;
+  text-decoration: none;
+  transition: transform, font-size, color;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in;
+}
+.nav-links:active {
+  background-color: rgba(194, 0, 0, .7);
+  color: var(--base1);
+}
+.nav-link-hover {
+  color: var(--secondary2);
+  font-size: 1.1em;
+}
+
+        /* landing subcontent */
+.landing-Subcontent {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  bottom: 1.5em;
+  left: 0;
+  position: absolute;
+}
+.icons-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 2em 0 4em;
+}
+.icons-div i {
+  color: var(--secondary1);
+  padding: .5em 0;
+}
+.subheading-div h4 {
+  font-size: 1.75em;
+}
+.subheading-div p {
+  text-align: left;
+  width: 20%;
+}
+      /* main heading content */
+.main-heading-content {
+  display: inline-block;
+  margin-left: 27em;
+  position: relative;
+  z-index: 100;
+  animation-name: fade-in;
+  animation-duration: 2.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+.h1-top {
+  margin-left: 1em;
+}
+.h1-btm {
+  margin-left: .5em;
+}
+.h1-hover {
+  color: var(--primary1);
+  font-size: 10.5em;
+  opacity: 5;
+}
+/* .h1-top:hover,
+.h1-btm:hover {
+  transform: skewX(10deg) scale(.5, .5);
+} */
+.h1-mid:hover {
+  transform: skewX(-10deg) scale(1, 1.25);
+}
+
+/* Bike Btns Section */
+.pop-btns-div {
+  align-items: flex-end;
+  bottom: 20px;
+  right: -40px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-around;
+  position: absolute;
+  opacity: .7;
+}
+.pop-btns {
+  background-color: var(--primary1);
+  border: 1px solid var(--base2);
+  border-radius: 5px 5px 0 0;
+  color: var(--base1);
+  display: flex;
+  justify-content: center;
+  height: 1.8em;
+  width: 7em;
+  padding: 5px 0 0 0;
+  text-align: center;
+  transform: rotate(270deg);
+  transition: height, margin;
+  transition-duration: 1500ms;
+  transition-timing-function: ease-in;
+}
+.bike-btns a {
+  color: var(--base1);
+}
+.popout {
+  background-color: rgba(167, 0, 0, .7);
+  color: var(--base1);
+  align-items: flex-start;
+  height: 60.8em;
+}
+.popHover {
+  background-color: rgba(255, 255, 255, 1) !important;
+  color: var(--base2);
+  margin: 0 2.1px 0 0;
+}
+.pop-btns:active {
+  background-color: rgba(167, 0, 0, .7);
+}
+
+/* Product Modals */
+#Product-Modal2 {
+  background-color: rgba(47, 79, 79, .5);
+}
+.product-modal {
+    align-items: center;
+    background-color: rgba(167, 0, 0, .5);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 80px;
+    height: 80vh;
+    width: 60vw;
+    /* transition: transform;
+    transition-duration: 500ms;
+    transform: translateY(1000px);
+    animation: sliding-modal;
+    animation-duration: 1500ms; */
+    z-index: 1050;
+}
+/*
+@keyframes sliding-modal {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+} */
+.sliding-modal {
+  display: flex;
+}
+.product-div {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+.product-img {
+  background-color: var(--base2);
+  box-shadow: 10px 10px 20px var(--base2);
+  height: auto;
+  width: 21em;
+  margin: 2em 1em 0;
+  padding: 1.5em;
+  transition: transform 500ms ease;
+}
+.product-img2 {
+  transform: scaleX(-1);
+}
+.product-img:hover {
+  transform: translateY(-5px);
+}
+.product-text-content {
+  margin: 5em 0 1.25em 3em;
+}
+.product-title,
+.pricing-title {
+  color: var(--base1);
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0 0 .5em;
+}
+.product-description {
+  color: var(--secondary1);
+}
+.sizing-btn-div {
+  display: inline-flex;
+}
+.sizing-btns {
+  align-items: center;
+  background-color: rgba(194, 194, 194, .5);
+  cursor: pointer;
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  justify-content: center;
+  height: 7px;
+  width: 7px;
+  margin: 0 15px;
+  padding: 1em;
+}
+.sizing-btns:hover {
+  background-color: rgba(112, 112, 112, .5);
+}
+.sizing-btns:active {
+  background-color: rgba(255, 255, 255, 1);
+}
+.specs-and-pricing {
+  align-items: center;
+  background-color: var(--base2);
+  display: flex;
+  margin: auto 0 4.1em;
+  padding: .5em 0;
+  width: 100%;
+}
+.specs-div {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 3em;
+}
+.specs-row {
+  margin: 1em 2em 1em 0;
+}
+.specs-row h6 {
+  color: var(--secondary1);
+  font-family: Montserrat, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: capitalize;
+}
+.specs-row p {
+  color: var(--secondary1);
+  font-size: 12px;
+  margin: .15em 0;
+}
+.buy-btn {
+  background-color: var(--base2);
+  border: 1px solid var(--base1);
+  border-radius: 50px;
+  color: var(--base1);
+  padding: .5em 1.5em;
+  transition: background-color, color, transform;
+  transition-duration: 300ms;
+}
+.btn-hover {
+  background-color: rgba(197, 0 ,0, .81);
+  border: 1px solid var(--base1);
+  color: var(--base1);
+  cursor: pointer;
+  transform: translateY(-5px);
+}
