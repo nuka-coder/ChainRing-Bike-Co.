@@ -55,6 +55,12 @@ p {
   cursor: pointer;
   font-size: 1.5em;
   opacity: .5;
+  transition: background-color, color, transform;
+  transition-duration: 300ms;
+}
+.icons-hover:hover {
+  color: var(--base1);
+  transform: translateY(-5px);
 }
 .cart-icon {
   color: var(--base1);
@@ -66,11 +72,18 @@ p {
 .png-icons {
   background-color: var(--secondary1);
   border-radius: 2.5px;
+  cursor: pointer;
   height: 1.2rem;
   opacity: .5;
   margin: .7em 0 0;
   padding: 1.25px;
   width: 1.2rem;
+  transition: background-color, transform;
+  transition-duration: 300ms;
+}
+.png-icons:hover {
+  background-color: var(--base1);
+  transform: translateY(-5px);
 }
 .star-icon {
   color: var(--base1);
