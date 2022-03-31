@@ -91,18 +91,6 @@ p {
   padding: 3px .25em;
 }
 
-/*  Javascript Toggled Classes */
-/* .display-none {
-  animation-name: fade-out;
-  animation-duration: 1000ms;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-@keyframes fade-out {
-  from {opacity: inherit;}
-  to {opacity: 0;}
-} */
-
 /* Landing Section */
 .landing-section {
   background-image: url(images/bike-bg-1.jpg);
@@ -379,7 +367,8 @@ p {
   font-size: 12px;
   margin: .15em 0;
 }
-.buy-btn {
+.buy-btn,
+.dealer-btn {
   background-color: var(--base2);
   border: 1px solid var(--base1);
   border-radius: 50px;
@@ -394,4 +383,53 @@ p {
   color: var(--base1);
   cursor: pointer;
   transform: translateY(-5px);
+}
+
+/* Cart */
+.cart-div {
+  position: relative;
+}
+.cart-modal {
+  background-color: var(--base1);
+  border-radius: 5px;
+  height: 250px;
+  width: 250px;
+  padding: 5px;
+  position: absolute;
+  bottom: -270px;
+  right: 0;
+}
+.cart-modal p {
+  color: var(--base2);
+  font-size: 1em;
+  margin: 1px 5px;
+}
+/* product image */
+.cart-product {
+  height: 80px;
+  width: 120px;
+}
+.cart-headings {
+  color: var(--base2);
+  font-size: 1.25em;
+  margin: 5px;
+}
+.product-name {
+  font-weight: 500;
+}
+          /* the div new products get added to */
+.product-add {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  overflow-y: scroll;
+  padding: 5px;
+}
+          /*  The actual cart item */
+.cart-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: .5em;
 }
