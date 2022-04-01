@@ -249,7 +249,11 @@
         <a href="#" class="nav-links">Repair</a>
       </nav>
       <div class="cart-div">
-        <i class="fa-solid fa-bicycle cart-icon"></i>
+        <div onclick="openCart()" class="quantity-counter-div">
+          <i class="fa-solid fa-bicycle cart-icon"><div id="total-quantity" class="quantity-counter">0
+          </div></i>
+
+        </div>
 
         <div class="cart-modal">
           <h5 class="cart-headings">Cart</h5>
@@ -257,6 +261,12 @@
 
           <div id="Cart-Modal" class="product-add">
 
+            <div class="empty-cart-msg">
+              <p>
+                There's nothing in your cart...
+              </p>
+            </div>
+<!--
               <div class="cart-item">
                 <div>
                   <img src="images/product bike 1.jpg" alt="cart product" class="cart-product">
@@ -266,15 +276,21 @@
                 <p class="product-price">$500.00</p>
                 <p class="quantity">Qty: 1</p>
               </div>
-              </div>
-
-
+              <div class="delete-btn">X</div>
+              </div> -->
           </div>
-          
+
           <hr>
-          <h5 class="cart-headings">
-            Subtotal
-          </h5>
+          <div class="subtotal-div">
+            <div>
+              <h5 class="cart-headings">
+                Subtotal
+              </h5>
+            </div>
+            <div>
+              <p id="subtotal">0</p>
+            </div>
+          </div>
         </div>
 
       </div>
