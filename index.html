@@ -32,7 +32,7 @@
     <div class="product-div">
       <div class="product-text-content">
         <div>
-          <h3 class="product-title">Product Name</h3>
+          <h3 id="product-title1" class="product-title">Maverick</h3>
           <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas id eaque at expedita modi dolorum iusto ipsum explicabo sapiente fugit.</p>
         </div>
         <div>
@@ -88,7 +88,7 @@
       </div>
       <div class="pricing-div">
         <h3 class="pricing-title">$500.00</h3>
-        <button class="buy-btn">
+        <button id="dealer-btn" class="dealer-btn">
           Find a Dealer
         </button>
       </div>
@@ -99,7 +99,7 @@
     <div class="product-div">
       <div class="product-text-content">
         <div>
-          <h3 class="product-title">Product Name</h3>
+          <h3 id="product-title2" class="product-title">Raptor</h3>
           <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas id eaque at expedita modi dolorum iusto ipsum explicabo sapiente fugit.</p>
         </div>
         <div>
@@ -122,7 +122,7 @@
         </div>
       </div>
       <div class="product-img-div">
-        <img src="images/bike product generic.jpg" alt="Product Image 2" class="product-img product-img2">
+        <img src="images/product bike 1.jpg" alt="Product Image 2" class="product-img product-img2">
       </div>
     </div>
     <div class="specs-and-pricing">
@@ -154,8 +154,8 @@
         </div>
       </div>
       <div class="pricing-div">
-        <h3 class="pricing-title">$500.00</h3>
-        <button class="buy-btn"> Buy Now
+        <h3 class="pricing-title">$600.00</h3>
+        <button id="buy-btnRaptor" class="buy-btn buy-btnRaptor"> Buy Now
         </button>
       </div>
     </div>
@@ -165,7 +165,7 @@
     <div class="product-div">
       <div class="product-text-content">
         <div>
-          <h3 class="product-title">Product Name</h3>
+          <h3 id="product-title3" class="product-title">Venus</h3>
           <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas id eaque at expedita modi dolorum iusto ipsum explicabo sapiente fugit.</p>
         </div>
         <div>
@@ -188,7 +188,7 @@
         </div>
       </div>
       <div class="product-img-div">
-        <img src="images/bike product generic.jpg" alt="Product Image 2" class="product-img product-img2">
+        <img src="images/product bike 1.jpg" alt="Product Image 3" class="product-img">
       </div>
     </div>
     <div class="specs-and-pricing">
@@ -220,8 +220,8 @@
         </div>
       </div>
       <div class="pricing-div">
-        <h3 class="pricing-title">$500.00</h3>
-        <button class="buy-btn"> Buy Now
+        <h3 class="pricing-title">$650.00</h3>
+        <button id="buy-btnVenus" class="buy-btn buy-btnVenus"> Buy Now
         </button>
       </div>
     </div>
@@ -234,11 +234,11 @@
     <div class="pop-btns-div">
       <a class="pop-btns pop-btn1" href="#">bike 1</a>
       <a class="pop-btns pop-btn2" href="#">bike 2</a>
-      <a class="pop-btns pop-btn3" href="#" onclick="slideModal3()">bike 3</a>
+      <a class="pop-btns pop-btn3" href="#">bike 3</a>
     </div>
 
     <header id="header" class="header">
-      <a href="#index.html">
+      <a href="index.html">
         <div class="logo-div">
           <p class="logo-text1">CHAIN<span class="logo-text2">ring</span></p>
         </div>
@@ -249,7 +249,50 @@
         <a href="#" class="nav-links">Repair</a>
       </nav>
       <div class="cart-div">
-        <i class="fa-solid fa-bicycle cart-icon"></i>
+        <div onclick="openCart()" class="quantity-counter-div">
+          <i class="fa-solid fa-bicycle cart-icon"><div id="total-quantity" class="quantity-counter">0
+          </div></i>
+
+        </div>
+
+        <div class="cart-modal">
+          <h5 class="cart-headings">Cart</h5>
+          <hr>
+
+          <div id="Cart-Modal" class="product-add">
+
+            <div class="empty-cart-msg">
+              <p>
+                There's nothing in your cart...
+              </p>
+            </div>
+<!--
+              <div class="cart-item">
+                <div>
+                  <img src="images/product bike 1.jpg" alt="cart product" class="cart-product">
+                </div>
+              <div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">$500.00</p>
+                <p class="quantity">Qty: 1</p>
+              </div>
+              <div class="delete-btn">X</div>
+              </div> -->
+          </div>
+
+          <hr>
+          <div class="subtotal-div">
+            <div>
+              <h5 class="cart-headings">
+                Subtotal
+              </h5>
+            </div>
+            <div>
+              <p id="subtotal">0</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </header>
@@ -257,22 +300,23 @@
     <section id="Landing-Subcontent" class="landing-Subcontent">
 
       <div class="icons-div">
-        <i class="fab fa-instagram-square icons"></i>
-        <i class="fab fa-facebook-square icons"></i>
-        <i class="fab fa-twitter-square icons"></i>
+        <i class="fab fa-instagram-square icons icons-hover"></i>
+        <i class="fab fa-facebook-square icons icons-hover"></i>
+        <i class="fab fa-twitter-square icons icons-hover"></i>
         <img src="images/share-icon.png" alt="Share" class="png-icons">
       </div>
 
       <div class="subheading-div">
         <h4>SUBHEADING</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus odio voluptates ab dolorem atque deleniti voluptas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Repellendus odio voluptates ab dolorem atque deleniti voluptas.</p>
       </div>
     </section>
 
     <section id="main-heading-content" class="main-heading-content">
       <div class="heading-div">
-        <h1 class="h1-top">Big</h1> <br>
-        <h1 class="h1-mid">Bold</h1>
+        <h1 class="h1-top">Your</h1> <br>
+        <h1 class="h1-mid">Site</h1>
         <br>
         <h1 class="h1-btm">Heading</h1>
       </div>
