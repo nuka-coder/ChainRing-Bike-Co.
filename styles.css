@@ -379,8 +379,16 @@ p {
 #buy-btnRaptor:hover {
   background-color: var(--product2Color);
 }
+#buy-btnRaptor:active {
+  background-color: var(--base1);
+  color: var(--base2);
+}
 #buy-btnVenus:hover {
   background-color: var(--product3Color);
+}
+#buy-btnVenus:active {
+  background-color: var(--base1);
+  color: var(--base2);
 }
 .buy-btn,
 .dealer-btn {
@@ -420,14 +428,14 @@ p {
   color: var(--base1);
   cursor: pointer;
   font-family: Montserrat, monospace;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   padding: 2.5px;
   position: absolute;
   right: 30px;
-  top: -20px;
+  top: -15px;
   text-align: center;
   transform: rotatey(180deg);
 }
