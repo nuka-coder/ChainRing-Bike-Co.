@@ -29,10 +29,10 @@ button {
   font-size: 1em;
 }
 h1 {
-  color: var(--base1);
+  color: rgba(255, 255, 255, .8);
   display: inline-block;
   font-family: "Agency FB", arial;
-  font-size: 8em;
+  font-size: 7.5em;
   font-weight: bolder;
   line-height: 150px;
   margin: 0;
@@ -40,6 +40,7 @@ h1 {
   transition: text-shadow 410ms ease-in 0s;
   transition: font-size 350ms ease-in 0s;
   transition: transform 310ms ease-in 0s;
+  transition: color 350ms ease-in 0s;
 }
 h2, h3, h4, h5, h6 {
   color: var(--base1);
@@ -190,8 +191,10 @@ p {
 }
 .subheading-div h4 {
   font-size: 1.75em;
+  margin: 10px 0;
 }
 .subheading-div p {
+  font-size: 1rem;
   text-align: left;
   width: 20%;
 }
@@ -214,12 +217,13 @@ p {
 }
 .h1-hover {
   color: var(--primary1);
-  font-size: 10.5em;
-  opacity: 5;
+  opacity: .8;
 }
 
 .h1-mid:hover {
-  transform: skewX(-10deg) scale(1, 1.25);
+  color: var(--primary1);
+  opacity: .8;
+  /* transform: skewX(-10deg) scale(1, 1.25); */
 }
 
 /* Bike Btns Section */
@@ -233,12 +237,14 @@ p {
   justify-content: space-around;
   position: absolute;
   opacity: .7;
+  z-index: 2000;
 }
 .pop-btns {
   background-color: var(--primary1);
   border: 1px solid var(--base2);
   border-radius: 5px 5px 0 0;
   color: var(--base1);
+  cursor: pointer;
   display: flex;
   justify-content: center;
   height: 1.8em;
@@ -301,6 +307,7 @@ p {
 .product-img {
   background-color: var(--base2);
   box-shadow: 10px 10px 20px var(--base2);
+  cursor: pointer;
   height: auto;
   width: 21em;
   margin: 2em 1em 0;
@@ -309,6 +316,10 @@ p {
 }
 .product-img:hover {
   transform: translateY(-5px);
+}
+.product-img2 {
+  background-color: none !important;
+  padding: 0 !important;
 }
 .product-text-content {
   margin: 5em 0 1.25em 3em;
@@ -541,7 +552,7 @@ p {
   text-align: center;
   margin: auto 0;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1030px) {
   section {
     display: none;
   }

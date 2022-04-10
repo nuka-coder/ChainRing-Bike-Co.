@@ -177,7 +177,7 @@ function buyRaptor() {
   var product = {
     name: "Raptor",
     price: "$600.00",
-    product_photo: "images/product bike 1.jpg"
+    product_photo: "images/product-bike1.jpg"
   }
   let newCartItem = document.createElement("DIV");
   let newDiv1 = document.createElement("DIV");
@@ -231,7 +231,7 @@ function buyVenus() {
   const product = {
     name: "Venus",
     price: "$650.00",
-    product_photo: "images/product bike 1.jpg"
+    product_photo: "images/giant-bike1.jpg"
   }
   let newCartItem = document.createElement("DIV");
   let newDiv1 = document.createElement("DIV");
@@ -322,3 +322,44 @@ $(document).on("click", "#deleteFromCart", function(e) {
     cartMsg();
 }
 });
+
+//Product Swaps Listener
+ function swapProduct1() {
+   let mavImg = document.getElementById("Maverick-Img");
+   if (mavImg.getAttribute("src") === "images/scott-bike1.jpg") {
+   mavImg.setAttribute("src", "images/scott-bike2.jpg");
+   }
+   else if (mavImg.getAttribute("src")=== "images/scott-bike2.jpg") {
+     mavImg.setAttribute("src", "images/scott-bike3.jpg");
+   }
+   else if (mavImg.getAttribute("src")=== "images/scott-bike3.jpg") {
+     mavImg.setAttribute("src", "images/scott-bike1.jpg");
+   }
+};
+
+function swapProduct2() {
+  let rapImg = document.getElementById("Raptor-Img");
+  if (rapImg.getAttribute("src") === "images/product-bike1.jpg") {
+  rapImg.setAttribute("src", "images/product-bike2.jpg");
+  }
+  else if (rapImg.getAttribute("src")=== "images/product-bike2.jpg") {
+    rapImg.setAttribute("src", "images/product-bike3.jpg");
+  }
+  else if (rapImg.getAttribute("src")=== "images/product-bike3.jpg") {
+    rapImg.setAttribute("src", "images/product-bike1.jpg");
+  }
+};
+
+
+function swapProduct3() {
+  let venImg = document.getElementById("Venus-Img");
+  if (venImg.getAttribute("src") === "images/giant-bike1.jpg") {
+  venImg.setAttribute("src", "images/giant-bike2.jpg");
+  }
+  else if (venImg.getAttribute("src")=== "images/giant-bike2.jpg") {
+    venImg.setAttribute("src", "images/giant-bike3.jpg");
+  }
+  else if (venImg.getAttribute("src")=== "images/giant-bike3.jpg") {
+    venImg.setAttribute("src", "images/giant-bike1.jpg");
+  }
+};
