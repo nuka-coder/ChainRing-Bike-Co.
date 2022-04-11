@@ -26,14 +26,16 @@
 </head>
 
 <body>
-  <div class="inProgress-modal"><p class="progress-msg">Almost there! Check back soon for the responsive updates.</p></div>
+  <div class="inProgress-modal">
+    <p class="progress-msg">Almost there! Check back soon for the responsive updates.</p>
+  </div>
   <!-- Product Modals -->
   <!-- Modal 1 -->
   <section id="Product-Modal1" class="product-modal">
     <div class="product-div">
       <div class="product-text-content">
         <div>
-          <h3 id="product-title1" class="product-title">Maverick</h3>
+          <h3 id="product-title1" class="product-title">Maverick QLR</h3>
           <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas id eaque at expedita modi dolorum iusto ipsum explicabo sapiente fugit.</p>
         </div>
         <div>
@@ -56,7 +58,7 @@
         </div>
       </div>
       <div class="product-img-div">
-        <img src="images/product bike 1.jpg" alt="Product Image 1" class="product-img">
+        <img onclick="swapProduct1()" id="Maverick-Img" src="images/scott-bike1.jpg" alt="Product Image 1" class="product-img product-img2">
       </div>
     </div>
     <div class="specs-and-pricing">
@@ -95,12 +97,13 @@
       </div>
     </div>
   </section>
+
   <!-- Modal 2 -->
   <section id="Product-Modal2" class="product-modal">
     <div class="product-div">
       <div class="product-text-content">
         <div>
-          <h3 id="product-title2" class="product-title">Raptor</h3>
+          <h3 id="product-title2" class="product-title">Raptor XL2</h3>
           <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas id eaque at expedita modi dolorum iusto ipsum explicabo sapiente fugit.</p>
         </div>
         <div>
@@ -123,7 +126,7 @@
         </div>
       </div>
       <div class="product-img-div">
-        <img src="images/product bike 1.jpg" alt="Product Image 2" class="product-img product-img2">
+        <img id="Raptor-Img" onclick="swapProduct2()" src="images/product-bike1.jpg" alt="Product Image 2" class="product-img product-img2">
       </div>
     </div>
     <div class="specs-and-pricing">
@@ -166,7 +169,7 @@
     <div class="product-div">
       <div class="product-text-content">
         <div>
-          <h3 id="product-title3" class="product-title">Venus</h3>
+          <h3 id="product-title3" class="product-title">Venus Sport E01</h3>
           <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas id eaque at expedita modi dolorum iusto ipsum explicabo sapiente fugit.</p>
         </div>
         <div>
@@ -189,7 +192,7 @@
         </div>
       </div>
       <div class="product-img-div">
-        <img src="images/product bike 1.jpg" alt="Product Image 3" class="product-img">
+        <img id="Venus-Img" onclick="swapProduct3()" src="images/giant-bike1.jpg" alt="Product Image 3" class="product-img product-img3">
       </div>
     </div>
     <div class="specs-and-pricing">
@@ -233,9 +236,9 @@
   <section id="Landing" class="landing-section">
     <div class="red-stripe"></div>
     <div class="pop-btns-div">
-      <a class="pop-btns pop-btn1" href="#">bike 1</a>
-      <a class="pop-btns pop-btn2" href="#">bike 2</a>
-      <a class="pop-btns pop-btn3" href="#">bike 3</a>
+      <a class="pop-btns pop-btn1" href="#">Maverick</a>
+      <a class="pop-btns pop-btn2" href="#">Raptor</a>
+      <a class="pop-btns pop-btn3" href="#">Venus</a>
     </div>
 
     <header id="header" class="header">
@@ -251,8 +254,10 @@
       </nav>
       <div class="cart-div">
         <div onclick="openCart()" class="quantity-counter-div">
-          <i class="fa-solid fa-bicycle cart-icon"><div id="total-quantity" class="quantity-counter">0
-          </div></i>
+          <i class="fa-solid fa-bicycle cart-icon">
+            <div id="total-quantity" class="quantity-counter">0
+            </div>
+          </i>
 
         </div>
 
@@ -267,10 +272,10 @@
                 There's nothing in your cart...
               </p>
             </div>
-<!--
+            <!--
               <div class="cart-item">
                 <div>
-                  <img src="images/product bike 1.jpg" alt="cart product" class="cart-product">
+                  <img src="images/scott-bike1.jpg" alt="cart product" class="cart-product">
                 </div>
               <div>
                 <p class="product-name">Product Name</p>
@@ -301,25 +306,24 @@
     <section id="Landing-Subcontent" class="landing-Subcontent">
 
       <div class="icons-div">
-        <i class="fab fa-instagram-square icons icons-hover"></i>
-        <i class="fab fa-facebook-square icons icons-hover"></i>
-        <i class="fab fa-twitter-square icons icons-hover"></i>
-        <img src="images/share-icon.png" alt="Share" class="png-icons">
+        <a href="https://github.com/nuka-coder/ChainRing-Bike-Co./" target="_blank"><i class="fab fa-instagram-square icons icons-hover"></i></a>
+        <a href="https://github.com/nuka-coder/ChainRing-Bike-Co./" target="_blank"> <a href="https://github.com/nuka-coder/ChainRing-Bike-Co./" target="_blank"><i class="fab fa-facebook-square icons icons-hover"></i></a>
+          <a href="https://github.com/nuka-coder/ChainRing-Bike-Co./" target="_blank"><i class="fab fa-twitter-square icons icons-hover"></i></a>
+          <a href="https://github.com/nuka-coder/ChainRing-Bike-Co./" target="_blank"><img src="images/share-icon.png" alt="Share" class="png-icons"></a>
       </div>
 
       <div class="subheading-div">
-        <h4>SUBHEADING</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Repellendus odio voluptates ab dolorem atque deleniti voluptas.</p>
+        <h4>Our Mission</h4>
+        <p>ChainRing began in a small Detroit garage when tamagotchi's were popular, but a global brand was always our goal. Years later, we're bringing cycling to the forefront of modern transportation.</p>
       </div>
     </section>
 
     <section id="main-heading-content" class="main-heading-content">
       <div class="heading-div">
-        <h1 class="h1-top">Your</h1> <br>
-        <h1 class="h1-mid">Site</h1>
+        <h1 class="h1-top">Get Ready</h1> <br>
+        <h1 class="h1-mid">for the</h1>
         <br>
-        <h1 class="h1-btm">Heading</h1>
+        <h1 class="h1-btm">Ride</h1>
       </div>
     </section>
 
@@ -328,6 +332,12 @@
 
 
 
+
+
+  </section>
+  <section style="display: none;" id="attributions" class="attributions">
+    Photo by <a href="https://unsplash.com/@t14g0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">tiago almeida</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    Photo by <a href="https://unsplash.com/@jjnuttall?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Josh Nuttall</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 
   </section>
