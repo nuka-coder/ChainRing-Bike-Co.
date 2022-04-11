@@ -317,12 +317,13 @@ p {
 .product-img:hover {
   transform: translateY(-5px);
 }
-.product-img2 {
+.product-img2,
+.product-img3 {
   background-color: none !important;
   padding: 0 !important;
 }
 .product-text-content {
-  margin: 5em 0 1.25em 3em;
+  margin: 2em 0 1.25em 3em;
 }
 .product-title,
 .pricing-title {
