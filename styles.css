@@ -209,15 +209,7 @@ p {
   animation-timing-function: ease-out;
   animation-fill-mode: both;
 }
-.h1-top {
-  margin-left: 0;
-}
-.h1-mid {
-  margin-left: .5em;
-}
-.h1-btm {
-  margin-left: .5em;
-}
+
 .h1-hover {
   color: var(--primary1);
   opacity: .8;
