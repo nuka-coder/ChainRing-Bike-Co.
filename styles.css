@@ -210,6 +210,10 @@ p {
   animation-fill-mode: both;
 }
 
+.heading-div {
+  margin-top: 10em;
+}
+
 .h1-hover {
   color: var(--primary1);
   opacity: .8;
